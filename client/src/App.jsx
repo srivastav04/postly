@@ -23,15 +23,19 @@ function App() {
   const setIsAdmin = useStore((state) => state.setIsAdmin);
   useEffect(() => {
     if (isLoaded && user) {
+      console.log("User metadata:", user.publicMetadata);
       setUserName(user.username);
       setUserId(user.id);
       setUserAvatar(user.imageUrl);
-      if (user.publicMetadata?.role === 'admin') {
+      if ((user.publicMetadata?.role || '').toLowerCase().trim() === 'admin') {
         setIsAdmin(true);
       }
-
+      else {
+        setIsAdmin(false);
+      }
     }
-  }, [isLoaded, user, setUserId, setUserName]);
+  }, [isLoaded, user, setUserId, setUserName, setUserAvatar, setIsAdmin]);
+
 
   return (
 

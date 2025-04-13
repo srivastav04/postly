@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useQueryClient } from "@tanstack/react-query";
 import useAuthStore from "../store";
 
-console.log
+
+
 const NavBar = () => {
     const queryClient = useQueryClient();
     const [searchText, setSearchText] = useState("");
@@ -68,7 +69,7 @@ const NavBar = () => {
                     <Link to="/myPosts" className="text-[#2D336B] font-semibold hover:font-bold">
                         My Posts
                     </Link>
-                    {isAdmin && <Link to="/admin" className="text-[#2D336B] font-semibold hover:font-bold">Admin</Link>}
+                    {isAdmin ? <Link to="/admin" className="text-[#2D336B] font-semibold hover:font-bold">Admin</Link> : ""}
                     <UserButton />
                 </div>
                 {/* Hamburger Icon */}

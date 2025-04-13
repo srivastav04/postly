@@ -10,12 +10,12 @@ services:
       - /app/node_modules
     environment:
       - PORTS=3000
-      - MONGO_URL=mongodb://srivastav:mypassword@mongo:27017/postly?authSource=admin
-      - CLOUDINARY_CLOUD_NAME=dzt95xw2d
-      - CLOUDINARY_API_KEY=825718533866193
-      - CLOUDINARY_API_SECRET=6IM1wso13F1PMmfMrfsr72K0SzI
-      - REDIS_URL=redis://redis:6379
-      - REDIS_PORT=6379
+      - MONGO_URL=${MONGO_URL}
+      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+      - REDIS_URL=${REDIS_URL}
+      - REDIS_PORT=${REDIS_PORT}
   mongo:
     image: mongo
     environment:
