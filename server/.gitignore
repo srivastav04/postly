@@ -1,0 +1,19 @@
+
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Build
+dist/
+build/
+out/
+coverage/
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
