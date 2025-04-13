@@ -16,6 +16,8 @@ services:
       - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
       - REDIS_URL=${REDIS_URL}
       - REDIS_PORT=${REDIS_PORT}
+    networks:
+      - app-network
   mongo:
     image: mongo
     environment:
@@ -23,6 +25,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: mypassword
     volumes:
       - mongo-volumes:/data/db
+    networks:
+      - app-network
+
   # redis:
   #   image: redis
   #   ports:
