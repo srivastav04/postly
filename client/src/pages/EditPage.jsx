@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { useMutation } from '@tanstack/react-query'
 import { useQueryClient } from '@tanstack/react-query'
@@ -9,9 +9,13 @@ import { ErrorState, Loading, SuccessState } from '../components/States'
 
 const EditPage = () => {
     const { id } = useParams()
-
+    const { state } = useLocation()
     const now = new Date();
-    const { register, handleSubmit, formState: { errors }, reset } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        defaultValues: {
+            Description: state?.Description || "",
+        },
+    });
     const queryClient = useQueryClient();
     const [preview, setPreview] = useState(null);
     const { mutate, isLoading, isError, isSuccess, isPending } = useMutation({
