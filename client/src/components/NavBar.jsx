@@ -160,6 +160,8 @@ const NavBar = () => {
                                 >
                                     My Posts
                                 </Link>
+                                {isAdmin ? <Link to="/admin" className="text-[#2D336B] font-semibold hover:font-bold">Admin</Link> : ""}
+
                                 <div onClick={toggleSidebar}>
                                     <SignOutButton className="text-[#2D336B] hover:font-bold font-semibold"
                                     />
