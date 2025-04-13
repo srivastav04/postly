@@ -12,7 +12,7 @@ import {
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.status(200).send("Hello World!");
 });
 router.post("/create", upload.single("Image"), createPost);
 router.get("/getPosts/:user", sendPosts);
