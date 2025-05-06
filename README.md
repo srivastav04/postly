@@ -16,7 +16,6 @@
 - **Node.js + Express.js** for scalable API development
 - **MongoDB** (Mongoose) for flexible document-based storage
 - **Redis** for in-memory caching and real-time event handling
-- **Docker** for containerized, portable deployment
 
 ---
 
@@ -47,5 +46,8 @@ Postly was built as a performance-focused, full-stack side project to:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/postly.git
+git clone https:/srivastav04/your-username/postly.git
 cd postly
+
+```bash
+## FrontEnd
