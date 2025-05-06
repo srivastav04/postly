@@ -49,5 +49,4 @@ Postly was built as a performance-focused, full-stack side project to:
 git clone https:/srivastav04/your-username/postly.git
 cd postly
 
-```bash
-## FrontEnd
+
