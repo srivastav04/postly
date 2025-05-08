@@ -15,7 +15,7 @@ export const getPosts = async (user) => {
 
   const response = await axios.get(`${URL}/getPosts/${user}`);
 
-  return response.data;
+  return response.data[::-1]
 };
 
 export const editPost = async (data) => {
