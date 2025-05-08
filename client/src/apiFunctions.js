@@ -14,8 +14,8 @@ export const getPosts = async (user) => {
   else user = "allPosts";
 
   const response = await axios.get(`${URL}/getPosts/${user}`);
-  const res=response.data
-  return res[::-1]
+  const res=response.data.reverse()
+  return res
 };
 
 export const editPost = async (data) => {
